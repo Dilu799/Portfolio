@@ -5,13 +5,25 @@ $(document).ready(function(){
   $("#btn").mouseleave(function(){
   $(this).css({"background-color":"white","color":"black"})
   })
-  $("#fname").blur(function(){
-    var text=$(this).val()
-    if(text.length<4){
-      $("fname").show()
-    }else{
-      $("fname").hide()
-    }
-    })
-    ()
   })
+  
+function buttonClick() {
+  var name = document.forms["myForm"]["name"].value
+  var email = document.forms["myForm"]["emailid"].value
+  var contact = document.forms["myForm"]["contactno"].value
+
+  if(name == "" && email == "" && contact == "") {
+
+      alert("Name, Email, & Contact no. must be filled")
+      return false
+  } else {
+
+      var text = "Your Form is Submitted"
+      document.getElementById("display-info").innerHTML=text
+      $('#name').val('')
+      $('#emailid').val('')
+      $('#contactno').val('')
+      $('#message').val('')
+      return false
+  }
+}

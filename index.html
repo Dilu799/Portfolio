@@ -7,10 +7,50 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon"  href="title pic.jpeg" type="image/gif" sizes="16x16">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-</head>
+    <script>
+      
+    </script>
+  </head>
 <body>
+  
+  <header style="position: fixed; width: 100%; z-index: 1; background-color: #242c34;" >
+    <div class="row text-white container-fluid">
+        <div class="col-md-6 col-9 p-2 pl-5">
+            <h2>Mohammed Dhilshad</h2>
+        </div>
+
+        <div class="col-md-6 col-3">
+
+            <nav class="navbar navbar-expand-lg navbar-light">
+
+                <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+             
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                      <a class="nav-link text-white" href="#home-section">Home<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link text-white" href="#skills-section">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link text-white" href="#services-section">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#contact-section">Contact</a>
+                      </li>
+                  </ul>
+                </div>
+              </nav>
+
+        </div>
+    </div>
+</header> 
+<div class="container-fluid">
  
-        <section style="width: 100%"><div class="row align-items-center">
+        <section id="home-section"><div class="row align-items-center">
             <div class="col-md-6 col-sm-12 col-lg-8">
                 <img class="img-fluid" src="me.png" alt="It's me"  width="500%"></div>
                
@@ -19,9 +59,9 @@
                 </div></div>
             </div>
         </section>
-    <div id="Skills" >
-       <div class="container text-center p-5">
-           <h1>Skills</h1>
+    <div id="skills-section" >
+       <div class="container align-items-center p-5">
+           <h1 class="text-center">Skills</h1>
            <div class="row ">
                <div class=" col-lg-4 col-md-4 col-sm-12  p-5">
                 <div class="card" style="width: 18rem">
@@ -80,8 +120,8 @@
            
        </div>
 
-    <div class="" id="Services">
-        <h1>Services</h1>
+    <div id="services-section">
+        <h1 class="text-center">Services</h1>
         <div class="row ">
             <div class="col-lg-4 col-md-4 col-sm-12  p-5 ">
              <div class="card" style="width: 18rem">
@@ -117,20 +157,20 @@
     <h1 class="text-center">Contact Me</h1>
     <div class="row form-controls">
       <div class="col-md-12 p-5">
-      <form class="signup-form" id="signup-form">
+      <form class="signup-form" onsubmit="return buttonClick()" id="myForm">
         <div class="form-row">
           <div class="form-group signup-field name col-md-6">
             <label for="fname">Name</label>
-            <input type="text" name="fname" class="form-control" id="fname" placeholder="Name" required="required">
+            <input type="text" name="fname" class="form-control" id="name" placeholder="Name" required="required">
           </div>
 
           <div class="form-group col-md-6">
             <label for="inputEmail4">Email</label>
-            <input type="email" name="emailadddress" class="form-control" id="inputEmail4" placeholder="Email" required><br>
+            <input type="email" name="emailadddress" class="form-control" id="emailid" placeholder="Email" required><br>
           </div>
           <div class="form-group col-md-6 ">
             <label for="inputEmail4">Mobile</label>
-            <input type="number" class="form-control" id="inputEmail4" placeholder="Mobile number" required>
+            <input type="number" class="form-control" id="contactno" placeholder="Mobile number" required="required">
           </div>
         
         <div class="form-group col-md-6">
@@ -147,9 +187,10 @@
           </div>
           <textarea class="form-control" aria-label="With textarea" required="required"></textarea>
         </div>
+        <h6 id="display-info"></h6>
       </div>
        <div class="form-group text-center" style="padding-left:47.2%;">
-        <button type="submit" id="btn" class="button button4">Submit</button>
+        <button type="submit" onclick="buttonClick()" id="btn" class="button button4" method="post">Submit</button>
       </form>
    
     </div>
@@ -159,8 +200,14 @@
     <a href="https://wa.me/917994550151" target="_blank"><i class="fab fa-whatsapp-square fa-2x p-3" style="color:#0d0c52;"></i></a>
     <a href="https://www.linkedin.com/in/mohammad-dhilshad-32a3831b3/" target="_blank"><i class="fab fa-linkedin fa-2x p-3" style="color:#0d0c52;"></i></a>
     <a href="https://github.com/Dilu799" target="_blank"><i class="fab fa-github-square fa-2x p-3" style="color:#0d0c52;"></i></a>
-    <a href="mailto: dhilshad799@gmail.com" target="_blank"><i class="fas fa-envelope fa-2x p-3" style="color:#0d0c52;"></i></a>
+    <a href="mailto: dhilshad799@gmail.com" target="_blank"><i class="fas fa-envelope fa-2x p-3" style="color:#0d0c52;"></i></a><br>
+    <hr style="border-width: 2px; background-color: #0d0c52;"><br>
+    <h6>All rights reserved | Dhilshad.in &copy;</h6>
 </div>  
+
+
+</footer>
+</div>
 <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
