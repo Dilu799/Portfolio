@@ -7,23 +7,30 @@ $(document).ready(function(){
   })
   })
   
-function buttonClick() {
-  var name = document.forms["myForm"]["name"].value
-  var email = document.forms["myForm"]["emailid"].value
-  var contact = document.forms["myForm"]["contactno"].value
-
-  if(name == "" && email == "" && contact == "") {
-
-      alert("Name, Email, & Contact no. must be filled")
-      return false
-  } else {
-
-      var text = "Your Form is Submitted"
-      document.getElementById("display-info").innerHTML=text
-      $('#name').val('')
-      $('#emailid').val('')
-      $('#contactno').val('')
-      $('#message').val('')
-      return false
+  function buttonClick() {
+    var namec = document.forms["myForm"]["name"].value
+    var emailc = document.forms["myForm"]["emailid"].value
+    var messagec = document.forms["myForm"]["message"].value
+ 
+      if(namec == ""){
+      var nm ="Please enter your name"
+      document.getElementById("errorname").innerHTML=nm}else{
+        document.getElementById("errorname").innerHTML="";
+      }
+      if(emailc == ""){
+      var em ="Please enter your email"
+      document.getElementById("errormail").innerHTML=em}else{
+        document.getElementById("errormail").innerHTML="";
+      }
+      if(messagec == ""){
+      var ms ="Please enter your query"
+      document.getElementById("errormessage").innerHTML=ms}else{
+        document.getElementById("errormessage").innerHTML=""; 
+      }
+      if(namec !="" && emailc !="" && subjectc !="" && messagec !=""){
+        var mesg = "Form Submitted successfully"
+        document.getElementById("submitted").innerHTML=mesg
+        document.getElementById("myForm").reset();
+      }
+    
   }
-}
